@@ -163,7 +163,7 @@ uint8_t disassemble_6502_to_string(char* buffer, char* dasm_buffer, uint32_t pc)
 
 
 		default:
-			sprintf(op, "UNKNOWN %02x", *code);
+			sprintf(op, "dcb %02x", *code);
 	}
 
 	char arg1[5];
@@ -185,6 +185,6 @@ uint8_t disassemble_6502_to_string(char* buffer, char* dasm_buffer, uint32_t pc)
 		sprintf(arg2, "  ");
 	}
 
-	sprintf(dasm_buffer, "%04X\t\t%02X %s %s\t%s", pc, *code, arg1, arg2, op);
+	sprintf(dasm_buffer, "%4X:\t\t%02X %s %s\t%s", pc, *code, arg1, arg2, op);
 	return bytes;
 }

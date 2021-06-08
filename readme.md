@@ -20,13 +20,13 @@ make web
 ```
 
 ### Usage:
-```
-./6502dasm < test/simple.bin
+```sh
+./6502dasm < web/sample/07.bin
 ```
 
 ### Sample output:
 
-```
+```gas
    0:		A2 00   	LDX #$00
    2:		A0 00   	LDY #$00
    4:		8A      	TXA

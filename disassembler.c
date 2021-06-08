@@ -168,9 +168,6 @@ uint8_t disassemble_6502_to_string(char* buffer, char* dasm_buffer, uint32_t pc)
 
 	char arg1[5];
 	if (bytes > 1) {
-		/*if (op == BCC_REL || op == BEQ_REL || op == BMI_REL || op == BPL_REL || op == BVS_REL || op == BCS_REL || op == BNE_REL || op == BVC_REL) {
-			sprintf(arg1, "%04X", code[1]);
-		}*/
 		sprintf(arg1,"%02X", code[1]);
 	}
 	else {
